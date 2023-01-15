@@ -1,0 +1,112 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ash: rgba(0, 0, 0, 0.5);
+  --black: rgb(0, 0, 0);
+  --white: #fff;
+  --blue: #115454;
+  --lr-blue: #517070;
+  --elr-blue: #b8dbdb;
+}
+
+body {
+  background-color: var(--black);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.video-content-container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.video-content-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--ash);
+}
+
+.video-container {
+  position: absolute;
+  width: 100%;
+  max-height: 100vh;
+  inset: 0;
+  z-index: -2;
+}
+
+.video-header {
+  color: var(--white);
+  font-size: 3.5em;
+  text-align: center;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  gap: 1em 1em;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1em;
+}
+
+button {
+  padding: 1em;
+  border: 1px solid transparent;
+  border-radius: 1em;
+  box-shadow: 1px 1px 10px var(--white);
+}
+
+.video-control-btn {
+  position: relative;
+  padding-inline: 1em;
+}
+
+.video-play-back-control-container {
+  display: flex;
+  gap: 1em 1em;
+  flex-flow: wrap;
+}
+
+.control-btn {
+  margin-inline: 1em;
+}
+
+.span-overlay {
+  position: absolute;
+  width: 50%;
+  background-color: var(--blue);
+  border: inherit;
+  border-radius: inherit;
+  inset: 0;
+  transition: all 0.3s ease-in;
+  backdrop-filter: blur(10px);
+}
+
+.slide {
+  left: 50%;
+}
+
+.playback-btn {
+  background-color: var(--blue);
+}
+
+.playback-btn:hover {
+  background-color: var(--lr-blue);
+}
+
+.playback-btn:active {
+  background-color: var(--elr-blue);
+}
