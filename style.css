@@ -72,6 +72,7 @@ button {
 .video-control-btn {
   position: relative;
   padding-inline: 1em;
+  margin-inline-start: 2em;
 }
 
 .video-play-back-control-container {
@@ -99,6 +100,15 @@ button {
   left: 50%;
 }
 
+.video-control-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-block: 2.5em;
+  margin-inline: 2em;
+}
+
+/* 
 .playback-btn {
   background-color: var(--blue);
 }
@@ -109,4 +119,4 @@ button {
 
 .playback-btn:active {
   background-color: var(--elr-blue);
-}
+} */
