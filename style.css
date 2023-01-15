@@ -103,9 +103,9 @@ button {
 .video-control-container {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   margin-block: 2.5em;
-  margin-inline: 2em;
 }
 
 /* 
